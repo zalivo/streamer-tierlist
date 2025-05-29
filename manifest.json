@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "name": "Twitch Tierlist",
+    "version": "1.0",
+    "description": "Czech Streamer tierlist from video from Agraelus",
+    "content_scripts": [{
+        "matches": ["*://*.twitch.tv/*"],
+        "js": ["content.js"]
+    }],
+    "web_accessible_resources": [
+        "streamers.json"
+    ]
+}
