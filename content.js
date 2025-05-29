@@ -13,8 +13,10 @@ const TIER_COLORS = {
 
 function addTierDisplay() {
     const streamerName = document.title.split(' - ')[0];
-    
-    fetch(chrome.runtime.getURL('streamers.json'))
+
+    const jsonUrl = 'https://raw.githubusercontent.com/zalivo/streamer-tierlist/main/streamers.json'
+
+     fetch(jsonUrl)
         .then(response => response.json())
         .then(data => {
             const streamer = data.streamers.find(s => 

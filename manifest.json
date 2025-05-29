@@ -1,13 +1,21 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Twitch Tierlist",
     "version": "1.0",
     "description": "Czech Streamer tierlist from video from Agraelus",
+    "permissions": [
+        "https://raw.githubusercontent.com/*"
+    ],
+    "host_permissions": [
+        "*://*.twitch.tv/*"
+    ],
     "content_scripts": [{
         "matches": ["*://*.twitch.tv/*"],
         "js": ["content.js"]
     }],
-    "web_accessible_resources": [
-        "streamers.json"
-    ]
+    "icons": {
+        "16": "images/icon-small.png",
+        "48": "images/icon-medium.png",
+        "128": "images/icon-large.png"
+    }
 }
